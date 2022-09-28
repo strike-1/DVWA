@@ -25,7 +25,7 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@master
         with:
           args: >
-            -Dsonar.projectKey=unforgif-test
+            -Dsonar.projectKey=dvwa-test
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -36,7 +36,7 @@ jobs:
         uses: sonarsource/sonarqube-quality-gate-action@master
         with:
           args: >
-            -Dsonar.projectKey=unforgif-test
+            -Dsonar.projectKey=dvwa-test
         # Force to fail step after specific time.
         timeout-minutes: 5
         env:
