@@ -9,7 +9,7 @@ $page = dvwaPageNewGrab();
 $page[ 'title' ]   = 'Welcome' . $page[ 'title_separator' ].$page[ 'title' ];
 $page[ 'page_id' ] = 'home';
 
-echo 'Hola Mundo!'
+print('Hola Mundo!');
 
 $page[ 'body' ] .= "
 <div class=\"body_padded\">
