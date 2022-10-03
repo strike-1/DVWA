@@ -26,6 +26,9 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=dvwa-test
+            -Dsonar.dependencyCheck.htmlReportPath=./target/dependency-check/dependency-check-report.html
+            -Dsonar.dependencyCheck.jsonReportPath=./target/dependency-check/dependency-check-report.json
+            -Dsonar.dependencyCheck.xmlReportPath=./target/dependency-check/dependency-check-report.xml
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
