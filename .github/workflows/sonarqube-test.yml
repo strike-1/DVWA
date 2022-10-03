@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: Depcheck report
-          path: ${{github.workspace}}/reports
+          path: ${{github.workspace}}/target/dependency-check/
 
   sonarqube:
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=dvwa-test
-            -Dsonar.dependencyCheck.htmlReportPath=./target/dependency-check/dependency-check-report.html
+            -Dsonar.dependencyCheck.htmlReportPath=./dependency-check-report.html
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
