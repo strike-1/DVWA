@@ -57,8 +57,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build project with Maven
-        run: mvn clean install
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.4
+        with:
+          maven-version: 3.8.2
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
         id: Depcheck
